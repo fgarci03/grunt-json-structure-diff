@@ -34,9 +34,6 @@ module.exports = function (grunt) {
     // Configuration to be run (and then tested).
     json_structure_diff: {
       dist: {
-        options: {
-          breakOnFail: false
-        },
         files: {
           'tmp/log.txt': ['test/fixtures/a', 'test/fixtures/b', 'test/fixtures/c']
         }

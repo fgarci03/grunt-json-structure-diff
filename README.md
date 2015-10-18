@@ -1,10 +1,10 @@
 # grunt-json-structure-diff
 
-> Compare 2 JSON objects for structure equality, despite the actual content
+> Compare JSON files for structure equality, despite the actual content
 
 ## Important Note
 This plugin is on **EARLY** stage of development, is not properly tested, and does not yet allow a number of customizations I planned for it.
-Be careful if you use it on your projects! Make sure you provide the exact version you want to use until a stable version is released.
+Be careful if you use it on your projects! Make sure you provide the exact version you want to use until a (more) stable version is released (from 0.1.0 and after).
 
 ## Getting Started
 This plugin requires Grunt.
@@ -51,33 +51,41 @@ Default value: `false`
 
 Whether it should abort the Grunt task on error or not.
 
+#### options.verbose
+Type: `Boolean`
+Default value: `true`
+
+Whether it should print to the console the error log.
+
 ### Usage Examples
 
 #### Default Options
+In this example, Grunt will continue to run even if errors are found and they will be printed on the console.
 
 ```js
 grunt.initConfig({
   json_structure_diff: {
     options: {},
     files: {
-      'logs/log.txt': ['src/folderWithJson1', 'src/folderWithJson2'],
-    },
+      'logs/log.txt': ['src/folderWithJson1', 'src/folderWithJson2']
+    }
   },
 })
 ```
 
 #### Custom Options
-In this example, if an error is found, Grunt is aborted immediately.
+In this example, if an error is found, Grunt is aborted immediately. No error will be printed on the console
 
 ```js
 grunt.initConfig({
   json_structure_diff: {
     options: {
       breakOnFail: true,
+      verbose: false
     },
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
+      'logs/log.txt': ['src/folderWithJson1', 'src/folderWithJson2']
+    }
   },
 })
 ```
@@ -90,3 +98,8 @@ _(Nothing yet)_
 
 ## License
 Copyright (c) 2015 Filipe Garcia. Licensed under the MIT license.
+
+## TODO
++ TESTS!!;
++ Add support for direct file input, instead of folders that need to be in sync;
++ JSDoc.

@@ -1,7 +1,7 @@
 {
   "name": "grunt-json-structure-diff",
-  "version": "0.0.0",
-  "description": "Compare 2 JSON objects for structure equality, despite the actual content",
+  "version": "0.0.1",
+  "description": "Compare JSON files for structure equality, despite the actual content",
   "homepage": "https://github.com/fgarci03/grunt-json-structure-diff",
   "repository": "https://github.com/fgarci03/grunt-json-structure-diff",
   "author": {
@@ -27,5 +27,8 @@
   },
   "scripts": {
     "test": "grunt test"
+  },
+  "dependencies": {
+    "json-structure-diff": "0.0.1"
   }
 }
